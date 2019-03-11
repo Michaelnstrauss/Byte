@@ -15,7 +15,7 @@ def stock_url(url):
     stock = json.loads(response.text)
     for info in stock:
         with open('{}_chart.json'.format(symbol), 'w+') as stockprice_file:
-            json.dump(info, stockprice_file)
+            json.dump(info, stockprice_file, indent=2)
 
 #json.dump(info, '{}.json.'format(symbol))
 
